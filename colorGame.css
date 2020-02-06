@@ -1,0 +1,72 @@
+body{
+    background-color: #232323;
+    margin: 0;
+    font-family: "Montserrat", "Avenir";
+}
+
+.square{
+    width: 30%;
+    background: red;
+    border-radius: 30px;
+    padding-bottom: 30%;
+    float: left;
+    margin: 1.66%;
+    transition: background 0.2s;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+}
+
+#container{
+    margin: 20px auto;
+    max-width: 600px;
+}
+/* TITTLE OF THE GAME*/
+h1{
+    padding: 20px 0;
+    color: white;
+    line-height: 1.1;
+    text-align: center;
+    font-weight: normal;
+    background-color: royalblue;
+    margin: 0;
+    text-transform: uppercase;
+}
+#colorDisplay{
+    display: block;
+    font-size: 65px;
+}
+/* STRIPE STYLES*/
+button{
+    border: none;
+    background: none;
+    height: 100%;
+    text-transform: uppercase;
+    color: steelblue;
+    font-weight: 700;
+    font-size: inherit;
+    outline: none;
+}
+button:hover{
+    color: white;
+    background-color: royalblue;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+#stripe{
+    background: white;
+    word-spacing: 50px;
+    height: 30px;
+    text-align: center;
+    color: black;
+}
+#message{
+    display: inline-block;
+    width: 20%;
+    word-spacing: 0;
+}
+
+.selected{
+    background-color: royalblue;
+    color: white;
+}
