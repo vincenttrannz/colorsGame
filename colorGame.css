@@ -7,10 +7,12 @@ body{
 .square{
     width: 30%;
     background: red;
-    border-radius: 30px;
+    border: 0.5px outset;
+    box-shadow: 1px 1px gray;
+    border-radius: 20%;
     padding-bottom: 30%;
+    margin: 1.25%;
     float: left;
-    margin: 1.66%;
     transition: background 0.2s;
     -webkit-transition: background 0.2s;
     -moz-transition: background 0.2s;
@@ -69,4 +71,25 @@ button:hover{
 .selected{
     background-color: royalblue;
     color: white;
+}
+/* GAME GUIDE */
+.collapsible{
+    background-color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+.guide{
+    text-align: center;
+    padding: 0 18px;
+    overflow: hidden;
+    display: none;
+    background-color: whitesmoke;
+}
+.active:hover{
+    background-color: royalblue;
+    transition: all 0.5s;
 }

@@ -1,4 +1,4 @@
-var numSquares = 6;
+var numSquares = 9;
 var colors = [];
 var pickedColor;
 var squares = document.querySelectorAll(".square");
@@ -7,6 +7,20 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.getElementById("reset");
 var modeButtons = document.querySelectorAll(".mode");
+var collapse = document.getElementsByClassName("collapsible");
+
+for(var i = 0; i < collapse.length; i++){
+    collapse[i].addEventListener("click", function(){
+        console.log("Connected");
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if(content.style.display === "block"){
+            content.style.display === "none";
+        }else{
+            content.style.display === "block";
+        }
+    });
+};
 
 init();
 
@@ -15,7 +29,6 @@ function init(){
     setupSquares();
     reset();
 };
-    
 
 function setupModeButtons(){
     //mode buttons event listener
@@ -23,8 +36,15 @@ function setupModeButtons(){
         modeButtons[i].addEventListener("click", function(){
             modeButtons[0].classList.remove("selected");
             modeButtons[1].classList.remove("selected");
+            modeButtons[2].classList.remove("selected");
             this.classList.add("selected");
-            this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
+            if(this.textContent === "Easy"){
+                numSquares = 3;
+            } else if(this.textContent === "Medium"){
+                numSquares = 6;
+            } else{
+                numSquares = 9;
+            }
             reset();
             // if(this.textContent = "Easy"){
             //     numSquares = 3;
